@@ -56,8 +56,7 @@ function dealWithTouch(event) {
     } if(event.type== "mouseup" || event.type=="touchend"){
         mouseDown = false;
         console.log(event);
-    } else if( (event.type== "mousemove" && mouseDown) ||
-                (event.type=="touchmove" && mouseDown) ) {
+    } else if( (event.type== "mousemove" && mouseDown) ) {
         
         var parentOffset = $(this).parent().offset(); 
         var newY = event.clientY - parentOffset.top
@@ -68,6 +67,12 @@ function dealWithTouch(event) {
         
         checkIfPointIsInCorrectSquare(newX, newY, event.target.id);
         
+    } else if ( event.type=="touchmove" && mouseDown ){
+
+    	$("#"+event.target.id).attr("cx", newX);
+        $("#"+event.target.id).attr("cy", newY);
+        
+        checkIfPointIsInCorrectSquare(newX, newY, event.target.id);
     }
     
 }
