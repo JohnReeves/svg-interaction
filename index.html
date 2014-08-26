@@ -75,11 +75,11 @@ function dealWithTouch(event) {
       var x = touch.pageX - elm.left;
       var y = touch.pageY - elm.top;
 
-      
+
       $("#"+event.target.id).attr("cx", touch.pageX);
       $("#"+event.target.id).attr("cy", touch.pageY);
 
-      checkIfPointIsInCorrectSquare(newX, newY, event.target.id);
+      checkIfPointIsInCorrectSquare(touch.pageX, touch.pageY, event.target.id);
 
     	
         
