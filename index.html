@@ -14,11 +14,8 @@
     
     <!-- pots they have to go into -->
     <polygon id="yellowBox" points="0,300 150,300 150,450 0,450" fill="#ffcc00" fill-opacity="0.6"/>
-    
     <polygon id="greenBox" points="150,300 300,300 300,450 150,450" fill="#7cb342" fill-opacity="0.6"/>
-    
     <polygon id="indigoBox" points="300,300 450,300 450,450 300,450" fill="#3f51b5" fill-opacity="0.6"/>
-    
     <polygon id="pinkBox" points="450,300 600,300 600,450 450,450" fill="#c51162" fill-opacity="0.6"/>
     
 
@@ -75,15 +72,11 @@ function dealWithTouch(event) {
       var x = touch.pageX - elm.left;
       var y = touch.pageY - elm.top;
 
-
       $("#"+event.target.id).attr("cx", touch.pageX);
       $("#"+event.target.id).attr("cy", touch.pageY);
 
       checkIfPointIsInCorrectSquare(touch.pageX, touch.pageY, event.target.id);
 
-    	
-        
-        
     }
     
 }
